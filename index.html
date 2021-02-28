@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <!-- Tell the browser to be responsive to screen width -->
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- load all styles css -->
+        <link href="./assets/css/styles.css" rel="stylesheet">
+        <link href="./assets/css/lightgallery.min.css" rel="stylesheet">
+        <title>Web Based Comic Book Reader</title>
+    </head>
+
+    <body>
+        <div class="se-pre-con">
+			<div class="progress-text">Reading 0/0 pages</div>
+		</div> <!-- loading spinner -->
+
+        <center>
+            <fieldset>
+              <legend>
+                <button class="tab-button active" id="tab" tab="upload">Choose file from you computer</button>
+                <button class="tab-button" id="tab" tab="internal">Open file stored in the server</button>
+              </legend>
+              <br>
+
+              <div id="upload" class="option">
+                  <input type="file" class="custom-file-upload" name="fileup" id="fileup" accept=".cbr,.cbz,.cbt"><br>
+                  <i>(cbr,cbz,cbt files only)</i>
+              </div>
+
+              <div id="internal" class="option" style="display:none">
+                  <button id="readNow" comic_title="whizzkids_united.cbz">
+                    <img src='./comics/whizzkids_united_thumb.jpg' class='imgUrl'/>
+                    <br>Whizzkids United vs HIV
+                  </button>
+				  
+				  <button id="readNow" comic_title="The Dossier 001.cbr">
+                    <img src='./comics/The Dossier 001.jpg' class='imgUrl'/>
+                    <br>The Dossier 001
+                  </button>
+
+                  <button id="readNow" comic_title="zack_and_max.cbz">
+                    <img src='./comics/zack_and_max_thumb.jpg' class='imgUrl'/>
+                    <br>The Adventures of Zack &amp; Max
+                  </button>
+
+                  <button id="readNow" comic_title="comic_strip.cbz">
+                    <img src='./comics/comic_strip_thumb.jpg' class='imgUrl'/>
+                    <br>Alien Comic Strip
+                  </button>
+              </div>
+              <br>
+            </fieldset>
+
+            <br><br>
+
+            <!-- output comics images here -->
+            <div id="output"></div>
+
+
+            <a style='text-decoration:none;display:fixed;' href='https://github.com/afzafri/Web-Comic-Reader'>Afif Zafri</a> &copy; 2017 - <span id='currYear'></span>, All Rights Reserved.   <span style='color:red;'>Modified by 9comix</span>
+        </center>
+
+        <!-- load all scripts -->
+        <script src="./assets/js/jquery-3.2.0.min.js"></script>
+        <script src="./assets/js/uncompress/uncompress.js"></script>
+        <script src="./assets/js/lightGallery/lightgallery-all.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+
+    </body>
+</html>
